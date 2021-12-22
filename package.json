@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Arjen Postma <npm@arjenpostma.nl>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArjenPostma/fstr.git"
