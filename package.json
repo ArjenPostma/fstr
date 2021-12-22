@@ -2,7 +2,7 @@
   "name": "fstr-framework",
   "version": "0.0.1",
   "description": "A CSS Only Component Framework",
-  "main": "index.js",
+  "main": "dist/main.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
