@@ -4,9 +4,13 @@
   "description": "A CSS Only Component Framework",
   "main": "dist/main.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node-sass -w scss -o dist"
   },
-  "keywords": [],
+  "keywords": [
+    "CSS",
+    "Framework",
+    "Components"
+  ],
   "author": "Arjen Postma <npm@arjenpostma.nl>",
   "license": "MIT",
   "repository": {
@@ -16,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ArjenPostma/fstr/issues"
   },
-  "homepage": "https://github.com/ArjenPostma/fstr#readme"
+  "homepage": "https://github.com/ArjenPostma/fstr#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.0"
+  }
 }
