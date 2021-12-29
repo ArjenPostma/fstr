@@ -1,13 +1,13 @@
 {
-  "name": "fstr-framework",
+  "name": "fstr-css",
   "version": "0.0.2",
-  "description": "A CSS Only Component Framework",
+  "description": "A CSS Framework",
   "main": "dist/full.css",
   "scripts": {
     "sass:dev": "node-sass scss -o demo/dist --source-map=true",
-    "sass:dev:watch": "node-sass -w scss -o demo/dist --source-map=true",
-
-    "sass:prod": "node-sass scss -o dist --output-style=compressed"
+    "sass:dev:watch": "npm run sass:dev && node-sass -w scss -o demo/dist --source-map=true",
+    "sass:prod": "node-sass scss -o dist --output-style=compressed",
+    "dev": "live-server --open=demo"
   },
   "keywords": [
     "CSS",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ArjenPostma/fstr#readme",
   "devDependencies": {
+    "live-server": "^1.2.1",
     "node-sass": "^7.0.0"
   }
 }

@@ -1,0 +1,59 @@
+// Break points
+$xs: 0; // What small devices are between 0 - 320?
+$s: 321px; // Mobile devices: 321 - 480
+$sm: 481px; // Tablet devices: 481 - 768
+$m: 769px; // Small screens: 769 - 1024
+$l: 1025px; // Regular screens: 1025 - 1200
+$xl: 1201px; // Large screens: 1201 and up.
+
+// Amount of columns
+$columns: 16;
+
+$breakpoints: (
+  'xs': $xs,
+  's': $s,
+  'sm': $sm,
+  'm': $m,
+  'l': $l,
+  'xl': $xl
+);
+
+.container {
+  max-width: $xl;
+  margin: 0 auto;
+
+  &-fluid{
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@mixin create-mq($breakpoint) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $breakpoint) {
+  @include create-mq($breakpoint) {
+    @for $i from 1 through $columns {
+      .col-#{$modifier}-#{$i} {
+        flex-basis: (100 / ($columns / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+@each $modifier, $breakpoint in $breakpoints {
+  @include create-col-classes($modifier, $breakpoint);
+}
