@@ -4,7 +4,8 @@ $s: 321px; // Mobile devices: 321 - 480
 $sm: 481px; // Tablet devices: 481 - 768
 $m: 769px; // Small screens: 769 - 1024
 $l: 1025px; // Regular screens: 1025 - 1200
-$xl: 1201px; // Large screens: 1201 and up.
+$xl: 1201px; // Large screens: 1201 and 1600
+$xxl: 1601px; // Extra large screens: 1601 and up
 
 // Amount of columns
 $columns: 16;
@@ -15,11 +16,12 @@ $breakpoints: (
         'sm': $sm,
         'm': $m,
         'l': $l,
-        'xl': $xl
+        'xl': $xl,
+        'xxl': $xxl
 );
 
 .container {
-    max-width: $xl;
+    max-width: $xxl;
     margin: 0 auto;
 
     &-fluid {
@@ -32,6 +34,10 @@ $breakpoints: (
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    > * {
+        flex-basis: 100%;
+    }
 }
 
 @mixin create-mq($breakpoint) {
@@ -50,8 +56,8 @@ $breakpoints: (
             .col-#{$modifier}-#{$i} {
                 flex-basis: (100 / ($columns / $i) ) * 1%;
             }
-            .col-#{$modifier}-#{$i} {
-                flex-basis: (100 / ($columns / $i) ) * 1%;
+            .col-#{$modifier}-offset-#{$i} {
+                margin-left: (100 / ($columns / $i) ) * 1%;
             }
         }
     }
