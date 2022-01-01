@@ -1,0 +1,35 @@
+// ==== START GRID GLOBALS
+
+// Break points
+$xs: 0; // What small devices are between 0 - 320?
+$s: 321px; // Mobile devices: 321 - 480
+$sm: 481px; // Tablet devices: 481 - 768
+$m: 769px; // Small screens: 769 - 1024
+$l: 1025px; // Regular screens: 1025 - 1200
+$xl: 1201px; // Large screens: 1201 and 1600
+$xxl: 1601px; // Extra large screens: 1601 and up
+
+$breakpoints: (
+        'xs': 0,
+        's': 321,
+        'sm': 481,
+        'm': 769,
+        'l': 1025,
+        'xl': 1201,
+        'xxl': 1601
+);
+
+// Amount of columns
+$columns: 16;
+
+// ==== END GRID GLOBALS
+
+// ==== START UTILITIES GLOBALS
+
+$clearDirections: (
+        'both',
+        'left',
+        'right'
+);
+
+// ==== END UTILITIES GLOBALS
