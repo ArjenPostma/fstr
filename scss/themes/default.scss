@@ -1,0 +1,35 @@
+/**
+    Using regular CSS variables, so they're easier to overwrite in a project
+**/
+
+:root {
+    --font-color-light: #727C83;
+    --font-color: #2c2f33;
+    --font-color-dark: #23272a;
+
+    --background-color: #FFFFFF;
+
+    --default-lighter: #FFFFFF;
+    --default: #EEEEEE;
+    --default-darker: #DDDDDD;
+
+    --info-lighter: #a3c4e7;
+    --info: #8DB6E2;
+    --info-darker: #7091B4;
+
+    --primary-lighter: #679ED8;
+    --primary: #4286CF;
+    --primary-darker: #346BA5;
+
+    --danger-lighter: #DE4A46;
+    --danger: #D61E18;
+    --danger-darker: #AB1813;
+
+    --warning-lighter: #EB8F5E;
+    --warning: #E77436;
+    --warning-darker: #B85C2B;
+
+    --success-lighter: #93d874;
+    --success: #79CF52;
+    --success-darker: #60A541;
+}
