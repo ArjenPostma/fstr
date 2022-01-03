@@ -1,0 +1,56 @@
+$buttonTypes: (
+        'default',
+        'info',
+        'primary',
+        'danger',
+        'warning',
+        'success'
+);
+
+@mixin make-button($type) {
+    color: var(--#{$type}-font-inverted);
+    background-color: var(--#{$type});
+    -webkit-box-shadow: 2px 2px 5px -3px var(-#{$type}-shadow);
+    box-shadow: 2px 2px 5px -3px var(--#{$type}-shadow);
+
+    &:hover, &:active {
+        background-color: var(--#{$type}-darker);
+        -webkit-box-shadow: 2px 2px 5px -3px var(--#{$type}-shadow);
+        box-shadow: 2px 2px 5px -3px var(--#{$type}-shadow);
+    }
+
+    &:active {
+        top: 1px;
+        -webkit-box-shadow: 2px 1px 5px -3px var(--#{$type}-shadow);
+        box-shadow: 2px 1px 5px -3px var(--#{$type}-shadow);
+    }
+}
+
+.button {
+    display: inline-block;
+
+    margin: 4px;
+    padding: 8px 16px;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    font-weight: 400;
+
+    text-decoration: none;
+    color: var(--font-color);
+
+    position: relative;
+    border-radius: var(--button-border-radius);
+
+    // The default button has the styling of the default-button class.
+    @include make-button('default');
+
+    @each $buttonType in $buttonTypes {
+        &.button-#{$buttonType} {
+            @include make-button($buttonType);
+        }
+    }
+}

@@ -3,33 +3,54 @@
 **/
 
 :root {
-    --font-color-light: #727C83;
+    --font-color-light: #EEEEEE;
     --font-color: #2c2f33;
     --font-color-dark: #23272a;
 
     --background-color: #FFFFFF;
 
-    --default-lighter: #FFFFFF;
-    --default: #EEEEEE;
-    --default-darker: #DDDDDD;
+    --default-lighter: #f2f2f2;
+    --default: #F0F0F0;
+    --default-darker: #EDEDED;
+    --default-shadow: #DDDDDD;
+    --default-font: var(--default-lighter);
+    --default-font-inverted: var(--font-color);
 
     --info-lighter: #a3c4e7;
     --info: #8DB6E2;
     --info-darker: #7091B4;
+    --info-shadow: #E0E0E0;
+    --info-font: var(--info-lighter);
+    --info-font-inverted: var(--font-color-light);
 
     --primary-lighter: #679ED8;
     --primary: #4286CF;
     --primary-darker: #346BA5;
+    --primary-shadow: #E0E0E0;
+    --primary-font: var(--primary-lighter);
+    --primary-font-inverted: var(--font-color-light);
 
     --danger-lighter: #DE4A46;
     --danger: #D61E18;
     --danger-darker: #AB1813;
+    --danger-shadow: #E0E0E0;
+    --danger-font: var(--danger-lighter);
+    --danger-font-inverted: var(--font-color-light);
 
     --warning-lighter: #EB8F5E;
     --warning: #E77436;
     --warning-darker: #B85C2B;
+    --warning-shadow: #E0E0E0;
+    --warning-font: var(--warning-lighter);
+    --warning-font-inverted: var(--font-color-light);
 
     --success-lighter: #93d874;
     --success: #79CF52;
     --success-darker: #60A541;
+    --success-shadow: #E0E0E0;
+    --success-font: var(--success-lighter);
+    --success-font-inverted: var(--font-color-light);
+
+    --button-border-radius: 3px;
+
 }

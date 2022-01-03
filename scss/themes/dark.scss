@@ -1,0 +1,12 @@
+@import 'default.scss';
+
+
+/**
+    Using regular CSS variables, so they're easier to overwrite in a project
+    overwrite any variables from default.scss
+**/
+
+
+[data-theme="dark"] {
+
+}
