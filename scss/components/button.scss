@@ -10,21 +10,24 @@ $buttonTypes: (
 @mixin make-button($type) {
     color: var(--#{$type}-font-inverted);
     background-color: var(--#{$type});
-    -webkit-box-shadow: 2px 2px 5px -3px var(-#{$type}-shadow);
-    box-shadow: 2px 2px 5px -3px var(--#{$type}-shadow);
 
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
         background-color: var(--#{$type}-darker);
-        -webkit-box-shadow: 2px 2px 5px -3px var(--#{$type}-shadow);
-        box-shadow: 2px 2px 5px -3px var(--#{$type}-shadow);
-    }
-
-    &:active {
-        top: 1px;
-        -webkit-box-shadow: 2px 1px 5px -3px var(--#{$type}-shadow);
-        box-shadow: 2px 1px 5px -3px var(--#{$type}-shadow);
     }
 }
+
+@mixin make-button-outline($type) {
+    color: var(--#{$type}-font);
+    background-color: transparent;
+
+    border: 1px solid var(--#{$type});
+
+    &:hover, &:active, &:focus {
+        background-color: var(--#{$type}-lighter);
+        color: var(--#{$type}-font-inverted);
+    }
+}
+
 
 .button {
     display: inline-block;
@@ -42,8 +45,12 @@ $buttonTypes: (
     text-decoration: none;
     color: var(--font-color);
 
-    position: relative;
     border-radius: var(--button-border-radius);
+
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    position: relative;
 
     // The default button has the styling of the default-button class.
     @include make-button('default');
@@ -52,5 +59,14 @@ $buttonTypes: (
         &.button-#{$buttonType} {
             @include make-button($buttonType);
         }
+        &.button-#{$buttonType}-outline {
+            @include make-button-outline($buttonType);
+        }
+    }
+}
+
+@media not prefers-reduced-motion {
+    .button:active {
+        top: 1px;
     }
 }

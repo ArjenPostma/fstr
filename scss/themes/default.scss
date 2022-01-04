@@ -11,9 +11,9 @@
 
     --default-lighter: #f2f2f2;
     --default: #F0F0F0;
-    --default-darker: #EDEDED;
+    --default-darker: #E9E9E9;
     --default-shadow: #DDDDDD;
-    --default-font: var(--default-lighter);
+    --default-font: var(--font-color);
     --default-font-inverted: var(--font-color);
 
     --info-lighter: #a3c4e7;
@@ -53,4 +53,5 @@
 
     --button-border-radius: 3px;
 
+    --shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.20), 0 0 2px 0 rgba(20, 20, 20, 0.10);
 }
