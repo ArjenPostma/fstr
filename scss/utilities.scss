@@ -1,4 +1,8 @@
-@import 'globals.scss';
+$clearDirections: (
+        'both',
+        'left',
+        'right'
+);
 
 @each $direction in $clearDirections {
     .clear-#{$direction}::after {

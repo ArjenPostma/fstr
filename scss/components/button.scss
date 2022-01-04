@@ -1,0 +1,70 @@
+$buttonTypes: (
+        'default',
+        'info',
+        'primary',
+        'danger',
+        'warning',
+        'success'
+);
+
+@mixin make-button($type) {
+    color: var(--#{$type}-font-inverted);
+    background-color: var(--#{$type});
+
+    &:hover, &:active, &:focus {
+        background-color: var(--#{$type}-darker);
+    }
+}
+
+@mixin make-button-outline($type) {
+    color: var(--#{$type}-font);
+    background-color: transparent;
+
+    border: 1px solid var(--#{$type});
+
+    &:hover, &:active, &:focus {
+        background-color: var(--#{$type}-lighter);
+        color: var(--#{$type}-font-inverted);
+    }
+}
+
+
+.button {
+    display: inline-block;
+
+    margin: 4px;
+    padding: 8px 16px;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    text-decoration: none;
+    color: var(--font-color);
+
+    border-radius: var(--button-border-radius);
+
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    // The default button has the styling of the default-button class.
+    @include make-button('default');
+
+    @each $buttonType in $buttonTypes {
+        &.button-#{$buttonType} {
+            @include make-button($buttonType);
+        }
+        &.button-#{$buttonType}-outline {
+            @include make-button-outline($buttonType);
+        }
+    }
+}
+
+@media not prefers-reduced-motion {
+    .button:active {
+        top: 1px;
+    }
+}

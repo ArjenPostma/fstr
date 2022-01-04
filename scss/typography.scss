@@ -1,17 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
 :root {
-    --font-thin-small: 100 12px 'Lexend', sans-serif;
-    --font-thin-medium: 100 14px 'Lexend', sans-serif;
-    --font-thin-big: 100 16px 'Lexend', sans-serif;
+    --fonts: 'Roboto', sans-serif;
 
-    --font-regular-small: 400 12px 'Lexend', sans-serif;
-    --font-regular-medium: 400 14px 'Lexend', sans-serif;
-    --font-regular-big: 400 16px 'Lexend', sans-serif;
+    --font-thin-small: 100 12px var(--fonts);
+    --font-thin-medium: 100 14px var(--fonts);
+    --font-thin-big: 100 16px var(--fonts);
 
-    --font-bold-small: 700 12px 'Lexend', sans-serif;
-    --font-bold-medium: 700 14px 'Lexend', sans-serif;
-    --font-bold-big: 700 16px 'Lexend', sans-serif;
+    --font-regular-small: 400 12px var(--fonts);
+    --font-regular-medium: 400 14px var(--fonts);
+    --font-regular-big: 400 16px var(--fonts);
+
+    --font-bold-small: 700 12px var(--fonts);
+    --font-bold-medium: 700 14px var(--fonts);
+    --font-bold-big: 700 16px var(--fonts);
 
     font: var(--font-regular-medium);
+}
+
+//html.with-reading-help {
+//    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400;700&display=swap');
+//    --fonts: 'Lexend Deca', 'Roboto', sans-serif;
+//}
+
+.small-font {
+    font: var(--font-regular-small);
+}
+
+.big-font {
+    font: var(--font-regular-big);
 }
